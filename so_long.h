@@ -6,18 +6,15 @@
 /*   By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/13 14:16:00 by phudyka           #+#    #+#             */
-/*   Updated: 2022/06/16 15:43:11 by phudyka          ###   ########.fr       */
+/*   Updated: 2022/06/16 18:59:01 by phudyka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SO_LONG_H
 # define SO_LONG_H
-# define WIDTH	720
-# define HEIGHT	480
 
-# define MLX_SYNC_IMAGE_WRITABLE	1
-# define MLX_SYNC_WIN_FLUSH_CMD		2
-# define MLX_SYNC_WIN_CMD_COMPLETED	3
+# define	WIDTH	720
+# define	HEIGHT	480
 
 typedef struct	s_axes
 {
