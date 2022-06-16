@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   so_long.c                                          :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+        */
+/*   By: phudyka <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/15 17:42:44 by phudyka           #+#    #+#             */
-/*   Updated: 2022/06/16 15:46:42 by phudyka          ###   ########.fr       */
+/*   Created: 2022/04/12 11:23:42 by phudyka           #+#    #+#             */
+/*   Updated: 2022/04/14 14:41:08 by phudyka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "libft.h"
 
-int main(void)
+t_list	*ft_lstnew(void *content)
 {
-    t_init  init;
+	t_list	*nelem;
 
-    init.mlx = mlx_init();
-	init.window = mlx_new_window(init.mlx, HEIGHT, WIDTH, "so_long");
-	mlx_loop(init.mlx);
-    return (0);
+	nelem = malloc(sizeof(t_list));
+	if (!nelem)
+		return (NULL);
+	nelem->content = content;
+	nelem->next = NULL;
+	return (nelem);
 }

@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   so_long.c                                          :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+        */
+/*   By: phudyka <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/15 17:42:44 by phudyka           #+#    #+#             */
-/*   Updated: 2022/06/16 15:46:42 by phudyka          ###   ########.fr       */
+/*   Created: 2022/03/28 16:43:11 by phudyka           #+#    #+#             */
+/*   Updated: 2022/04/08 14:11:46 by phudyka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "libft.h"
 
-int main(void)
+void	*ft_calloc(size_t count, size_t size)
 {
-    t_init  init;
+	char	*val;
 
-    init.mlx = mlx_init();
-	init.window = mlx_new_window(init.mlx, HEIGHT, WIDTH, "so_long");
-	mlx_loop(init.mlx);
-    return (0);
+	val = malloc(count * size);
+	if (!val)
+		return (NULL);
+	ft_memset(val, 0, count * size);
+	return (val);
 }

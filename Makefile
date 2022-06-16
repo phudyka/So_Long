@@ -6,7 +6,7 @@
 #    By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/30 11:36:19 by phudyka           #+#    #+#              #
-#    Updated: 2022/06/15 17:49:02 by phudyka          ###   ########.fr        #
+#    Updated: 2022/06/16 15:47:35 by phudyka          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ LFT			=	libft/libft.a
 
 INC			=	-I ./inc -I ./libft -I ./mlx
 
-LIB			=	-L ./libft -lft -L ./mlx -lmlx -lXext -lX11 -lm -lbsd
+LIB			=	-o so_long -g -framework OpenGL -framework AppKit -L./mlx -lmlx
 
 OBJ			=	$(patsubst src%, obj%, $(SRC:.c=.o))
 

@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/31 11:20:04 by phudyka           #+#    #+#             */
-/*   Updated: 2022/06/16 11:07:36 by phudyka          ###   ########.fr       */
+/*   Created: 2022/06/13 14:16:00 by phudyka           #+#    #+#             */
+/*   Updated: 2022/06/16 15:43:11 by phudyka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SO_LONG_H
 # define SO_LONG_H
-# define WIDTH	1280
+# define WIDTH	720
 # define HEIGHT	480
 
 # define MLX_SYNC_IMAGE_WRITABLE	1
@@ -36,15 +36,12 @@ typedef struct	s_init
 	char	*address;
 }				t_init;
 
-
 typedef struct s_engine
 {
 	int		**map;
 	int		player;
 	int		moves;
 }				t_engine;
-
-
 
 # include <unistd.h>
 # include <stdio.h>
@@ -53,6 +50,6 @@ typedef struct s_engine
 # include <string.h>
 # include <errno.h>
 # include <mlx.h>
-# include "libft.h"
+# include "libft/libft.h"
 
 #endif

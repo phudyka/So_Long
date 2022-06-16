@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   so_long.c                                          :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+        */
+/*   By: phudyka <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/15 17:42:44 by phudyka           #+#    #+#             */
-/*   Updated: 2022/06/16 15:46:42 by phudyka          ###   ########.fr       */
+/*   Created: 2022/03/21 17:42:11 by phudyka           #+#    #+#             */
+/*   Updated: 2022/04/18 15:41:15 by phudyka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "libft.h"
 
-int main(void)
+size_t	ft_strlen(const char *s)
 {
-    t_init  init;
+	size_t	i;
 
-    init.mlx = mlx_init();
-	init.window = mlx_new_window(init.mlx, HEIGHT, WIDTH, "so_long");
-	mlx_loop(init.mlx);
-    return (0);
+	i = 0;
+	while (s[i] != '\0')
+		i++;
+	return (i);
 }

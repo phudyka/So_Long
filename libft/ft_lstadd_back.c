@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   so_long.c                                          :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+        */
+/*   By: phudyka <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/15 17:42:44 by phudyka           #+#    #+#             */
-/*   Updated: 2022/06/16 15:46:42 by phudyka          ###   ########.fr       */
+/*   Created: 2022/04/12 18:00:35 by phudyka           #+#    #+#             */
+/*   Updated: 2022/04/14 14:39:28 by phudyka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "libft.h"
 
-int main(void)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-    t_init  init;
+	t_list	*buf;
 
-    init.mlx = mlx_init();
-	init.window = mlx_new_window(init.mlx, HEIGHT, WIDTH, "so_long");
-	mlx_loop(init.mlx);
-    return (0);
+	if (!*lst)
+		*lst = new;
+	else
+	{
+		buf = ft_lstlast(*lst);
+		buf->next = new;
+	}
 }
