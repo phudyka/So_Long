@@ -6,11 +6,11 @@
 #    By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/30 11:36:19 by phudyka           #+#    #+#              #
-#    Updated: 2022/06/16 15:47:35 by phudyka          ###   ########.fr        #
+#    Updated: 2022/06/17 15:48:00 by phudyka          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		=	so_long
+NAME		=	so_long.a
 
 CC			=	gcc
 
@@ -28,7 +28,7 @@ OBJ			=	$(patsubst src%, obj%, $(SRC:.c=.o))
 
 SRC			=	so_long.c 	\
 
-all:		$(MLX) $(LFT) obj $(NAME)
+all:		$(MLX) $(LFT) $(NAME)
 
 $(NAME):	$(OBJ)
 			$(CC) $(FLAGS) -o $@ $^ $(LIB)
@@ -38,9 +38,6 @@ $(MLX):
 
 $(LFT):		
 			@make -s -C libft
-
-obj:
-			@mkdir -p obj
 
 obj/%.o:	src/%.c
 			$(CC) $(FLAGS) $(INC) -o $@ -c $<

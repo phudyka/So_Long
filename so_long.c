@@ -6,7 +6,7 @@
 /*   By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/15 17:42:44 by phudyka           #+#    #+#             */
-/*   Updated: 2022/06/16 19:30:32 by phudyka          ###   ########.fr       */
+/*   Updated: 2022/06/17 16:47:44 by phudyka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,7 @@ int main(void)
 	init.window = mlx_new_window(init.mlx, WIDTH, HEIGHT, "so_long");
 	init.img = mlx_new_image(init.mlx, WIDTH, HEIGHT);
     init.address = mlx_get_data_addr(init.img, &init.bpp, &init.lenght, &init.endian);
-    ft_pixput(&init, 5, 10, 0x00FF0000);
-    mlx_put_image_to_window(init.mlx, init.window, init.img, 0, 0);
-    mlx_hook(init.window, 2, 0, ft_close, &init);
     mlx_loop(init.mlx);
+    mlx_key_hook(init.mlx, ft_close, &init);
     return (0);
 }
